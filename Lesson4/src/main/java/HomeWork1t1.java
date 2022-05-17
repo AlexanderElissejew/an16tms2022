@@ -1,5 +1,5 @@
 
-public class h1t1 {
+public class HomeWork1t1 {
     public static int getRandom() {
         return (int) (Math.random() * 7) + 1;
     }
