@@ -7,6 +7,7 @@
 //*
 //* @param count - количество программистов
 //*/
+//
 
 
 import java.util.Scanner;
