@@ -1,5 +1,5 @@
 
-public class h1t1 {
+public class HomeWork1t1New {
     public static int getRandom() {
         return (int) (Math.random() * 7) + 1;
     }
@@ -33,3 +33,5 @@ public class h1t1 {
     }
 }
 
+//название класса пишу теперь с большой буквы :)
+//

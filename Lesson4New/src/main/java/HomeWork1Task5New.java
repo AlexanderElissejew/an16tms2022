@@ -6,12 +6,14 @@
 // * далее заполнить массив случайными значениями
 // * далее вывести массив на консоль
 // */
+//
+
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class h1t5 {
+public class HomeWork1Task5New {
     public static void main(String[] args) {
         int j;
         Scanner scan = new Scanner(System.in);
@@ -19,7 +21,8 @@ public class h1t5 {
         j = scan.nextInt();
         while (j < 0) {
             System.out.println("Wi wweli newernoe chislo");
-            scan.next();
+            System.out.println("Wwedite dlinnu massiwa: ");
+            j = scan.nextInt();
         }
         int[] array = new int[j];
         Random rand = new Random();
@@ -30,3 +33,5 @@ public class h1t5 {
 
     }
 }
+
+//убрал зацикливание при вводе -1

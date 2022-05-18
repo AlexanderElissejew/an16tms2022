@@ -1,4 +1,4 @@
-//**
+
 //* На вход приходит число.
 //* Вывести в консоль фразу из разряда "_COUNT_ программистов",
 //* заменить _COUNT_ на число которое пришло на вход в метод и заменить окончание в слове "программистов" на
@@ -7,21 +7,29 @@
 //*
 //* @param count - количество программистов
 //*/
+//
+
 
 import java.util.Scanner;
 
-public class h1t8 {
+public class HomeWork1Task8New {
     public static void main(String[] args) {
         int count;
         Scanner scanner = new Scanner(System.in);
         count = scanner.nextInt();
-        int p = count % 10;
-        if (p == 1) {
-            System.out.println(count + " programmist");
-        } else if (p > 1 && p < 5) {
-            System.out.println(count + " programmista");
-        } else {
+        if (count > 10 && count < 20) {
             System.out.println(count + " programmistow");
+        } else {
+            int p = count % 10;
+            if (p == 1) {
+                System.out.println(count + " programmist");
+            } else if (p > 1 && p < 5) {
+                System.out.println(count + " programmista");
+            } else {
+                System.out.println(count + " programmistow");
+            }
         }
     }
 }
+
+// Добавил поддержку исключений от 11 до 19
