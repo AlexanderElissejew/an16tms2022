@@ -19,7 +19,7 @@
 package by.tms.model;
 
 public class Address {
-    private static String city;
+    private String city;
     private String country;
 
     public Address(String city, String country) {
@@ -39,8 +39,8 @@ public class Address {
         return country;
     }
 
-    public static void setCity(String city) {
-        Address.city = city;
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public void setCountry(String country) {
