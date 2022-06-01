@@ -21,24 +21,16 @@ package by.tms.model;
 import java.util.Objects;
 
 public class MilitaryOffice {
-    private static Person[] personRegistry;
+    private PersonRegistry personRegistry;
 
-    public MilitaryOffice(Person[] personRegistry) {
-        MilitaryOffice.personRegistry = personRegistry;
-    }
-
-    public static Person[] getRecruits() {
-        for (Person person : personRegistry) {
-            if (person.getAge() >= 18 && person.getAge() <= 27 && person.getSex().equals("MALE")) {
-                System.out.println("Fit recruit: " + person.getName());
-            }
-        }
-        return new Person[0];
+    public MilitaryOffice(PersonRegistry personRegistry) {
+        this.personRegistry = personRegistry;
     }
 
     public void findPersonByName(String name) {
         int count = 0;
-        for (Person person : personRegistry) {
+        Person[] people = personRegistry.getRecruits();
+        for (Person person : people) {
             if (person.getName().equals(name)) {
                 count++;
             }
@@ -48,7 +40,8 @@ public class MilitaryOffice {
 
     public void findPersonForCity(String nameOfCity) {
         int count = 0;
-        for (Person person : personRegistry) {
+        Person[] people = personRegistry.getRecruits();
+        for (Person person : people) {
             if (person.getAge() >= 18 && person.getAge() <= 27 && person.getAddress().getCity().equals(nameOfCity) && Objects.equals(person.getSex(), "MALE")) {
                 count++;
             }
@@ -58,7 +51,8 @@ public class MilitaryOffice {
 
     public void findPersonByAge() {
         int count = 0;
-        for (Person person : personRegistry) {
+        Person[] people = personRegistry.getRecruits();
+        for (Person person : people) {
             if (person.getAge() >= 25 && person.getAge() <= 27 && Objects.equals(person.getSex(), "MALE")) {
                 count++;
             }

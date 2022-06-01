@@ -21,6 +21,7 @@ package by.tms.service;
 import by.tms.model.Address;
 import by.tms.model.MilitaryOffice;
 import by.tms.model.Person;
+import by.tms.model.PersonRegistry;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,8 +38,9 @@ public class Main {
             Person person = new Person("Vika", 22, "FEMALE", new Address("Vilnus", "Litwa"));
             people[2] = person;
         }
-        MilitaryOffice militaryOffice = new MilitaryOffice(people);
-        MilitaryOffice.getRecruits();
+        PersonRegistry personRegistry = new PersonRegistry(people);
+        MilitaryOffice militaryOffice = new MilitaryOffice(personRegistry);
+        personRegistry.getRecruits();
         militaryOffice.findPersonByName("Alexander");
         militaryOffice.findPersonForCity("Minsk");
         militaryOffice.findPersonByAge();
