@@ -19,10 +19,21 @@
 package by.tms.model;
 
 public class PersonRegistry {
-    private static Person[] people;
+    private Person[] people;
 
     public PersonRegistry(Person[] people) {
-        PersonRegistry.people = people;
+        this.people = people;
+    }
+
+    public Person[] getRecruits() {
+        Person[] recruits = new Person[people.length];
+        for (int i =0; i < people.length; i++) {
+            Person person = people[i];
+            if (person.getAge() >= 18 && person.getAge() <= 27 && person.getSex().equals("MALE")) {
+                recruits[i] = person;
+            }
+        }
+        return recruits;
     }
 
 
@@ -31,6 +42,6 @@ public class PersonRegistry {
     }
 
     public void setPeople(Person[] people) {
-        PersonRegistry.people = people;
+        this.people = people;
     }
 }
